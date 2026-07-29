@@ -100,7 +100,7 @@ Technologies are contextual, not malicious indicators.
 ├── mkdocs.yml                    GitHub Pages (MkDocs) configuration
 ├── docs/                         Full technical report (per-section Markdown)
 ├── evidence/                     Sanitized evidence excerpts + private-evidence notice
-├── images/                       Figure placeholders + sanitization guidance
+├── images/                       Sanitized investigation figures + sanitization guidance
 ├── diagrams/                     Mermaid diagrams
 ├── iocs/                         IOC inventory (csv/json/md) + false-positive notes
 ├── detection/                    Generic hunting guidance, example Splunk queries
