@@ -1,0 +1,28 @@
+=== SANITIZED TLS EXCERPTS ===
+Command: openssl s_client -connect visit-ledger.at:443 -servername visit-ledger.at
+
+Connecting to 2606:4700:130:436c:6f75:6466:6c61:7265   (Cloudflare edge, IPv6)
+
+Subject:    CN=visit-ledger.at
+Issuer:     C=US, O=Let's Encrypt, CN=YE1
+Not Before: Jun 7 11:52:16 2026 GMT
+Not After:  Sep 5 11:52:15 2026 GMT
+SANs:       *.visit-ledger.at, visit-ledger.at
+Protocol:   TLSv1.3
+Cipher:     TLS_AES_256_GCM_SHA384
+Verify return code: 0 (ok)
+
+Command: sslscan visit-ledger.at
+  TLSv1.0 enabled
+  TLSv1.1 enabled
+  TLSv1.2 enabled
+  TLSv1.3 enabled
+  No Heartbleed exposure reported for tested versions; same certificate identified.
+  -> Reflects the Cloudflare EDGE. Origin TLS configuration was not observed.
+
+Command: testssl.sh visit-ledger.at
+  testssl.sh: command not found   (tool not installed — ENVIRONMENT NOTE, not a finding)
+
+Interpretation:
+  - Valid, publicly trusted certificate does NOT establish Ledger ownership.
+  - Let's Encrypt is legitimate; its use here is not suspicious.

@@ -1,0 +1,47 @@
+{
+  "schema": "informal-ioc-list/1.0",
+  "case": "Ledger-Themed Alchemer Phishing Investigation",
+  "generated_note": "Educational, defensive. Values transcribed from sanitized case evidence.",
+  "high_value_iocs": [
+    { "type": "domain", "value": "visit-ledger.at", "confidence": "high", "notes": "Primary lookalike domain impersonating Ledger." },
+    { "type": "url", "value": "https://visit-ledger.at/alchcemser", "confidence": "high", "notes": "Primary call-to-action URL." },
+    { "type": "route", "value": "/alchcemser", "confidence": "high", "notes": "Dynamic route value; passed via a param named 'email'." }
+  ],
+  "email_indicators": [
+    { "type": "subject", "value": "Device Update Required", "confidence": "medium", "notes": "Generic phrasing may cause false positives." },
+    { "type": "from", "value": "noreply@alchemer.com", "confidence": "context", "notes": "Visible From (sender name Ledger). Legitimate Alchemer address; report to Alchemer, DO NOT block." },
+    { "type": "display_to", "value": "restore@ledger.live", "confidence": "medium", "notes": "Cosmetic To: header; differed from actual recipient." },
+    { "type": "template_string", "value": "[invite(survey_link)]", "confidence": "medium" },
+    { "type": "template_string", "value": "{{@survey_link}}", "confidence": "medium" }
+  ],
+  "alchemer_identifiers": [
+    { "type": "cid", "value": "cid495163", "confidence": "low", "semantics": "unverified" },
+    { "type": "sid", "value": "sid8936268", "confidence": "low", "semantics": "unverified" },
+    { "type": "rid", "value": "rid1785...9924", "confidence": "low", "semantics": "unverified", "note": "MASKED; full value private only." },
+    { "type": "qid", "value": "qid99", "confidence": "low", "semantics": "unverified" }
+  ],
+  "web_javascript_strings": [
+    { "value": "createVisitorAction", "confidence": "medium" },
+    { "value": "checkCloakitAction", "confidence": "medium", "note": "probable cloaking logic" },
+    { "value": "setCloakitTrustAction", "confidence": "medium", "note": "probable cloaking logic" },
+    { "value": "getRedirectAction", "confidence": "medium", "note": "dynamic redirect" },
+    { "value": "No redirect URL configured. Set one in the panel.", "confidence": "low" }
+  ],
+  "tls": {
+    "sans": ["*.visit-ledger.at", "visit-ledger.at"],
+    "issuer": "Let's Encrypt YE1",
+    "issuer_note": "Legitimate CA; contextual only, NOT malicious.",
+    "validity": { "not_before": "2026-06-07", "not_after": "2026-09-05" }
+  },
+  "shared_infrastructure_context": {
+    "warning": "These are shared Cloudflare assets, NOT attacker origin. DO NOT block by themselves.",
+    "ipv4_edge": "172.64.80.1",
+    "ipv6_edge": "2606:4700:130:436c:6f75:6466:6c61:7265",
+    "name_servers": ["harlan.ns.cloudflare.com", "paris.ns.cloudflare.com"],
+    "technologies": ["Next.js", "Cloudflare", "React Server Components", "HTTP/2", "HTTP/3", "TLS 1.3"]
+  },
+  "private_only": {
+    "note": "Retained privately; excluded from public repo.",
+    "items": ["full recipient address", "complete Message-ID", "full visitor ID (6a69f7d7...cb113)", "complete rid value"]
+  }
+}

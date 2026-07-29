@@ -1,0 +1,27 @@
+=== SANITIZED EMAIL HTML / MIME EXCERPTS ===
+
+Alchemer template remnants:
+  [invite(survey_link)]
+  {{@survey_link}}
+
+Alchemer identifiers (recipient value masked):
+  cid495163
+  sid8936268
+  rid1785…9924
+  qid99
+
+HTML editing remnants / comments:
+  NEW ADDITION
+  as requested
+  with the required link
+  with the exact text inside quotes
+
+Primary call-to-action URL:
+  https://visit-ledger.at/alchcemser
+
+Other:
+  - A Wikimedia-hosted Ledger logo asset was referenced.
+  - Footer links used placeholders such as href="#".
+  - The plain-text MIME alternative was poorly generated (contained CSS/layout content).
+  - No obvious standalone tracking pixel was identified in the provided HTML.
+    (This does not rule out tracking via redirect URLs, external assets, or the platform.)

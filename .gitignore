@@ -1,0 +1,38 @@
+# --- Private evidence: never commit ---
+# Raw, unsanitized evidence must stay out of the public repository.
+private/
+private-evidence/
+raw/
+raw-evidence/
+*.raw
+*.eml
+*.mbox
+*.har
+ledger.html
+app.js
+
+# Original, unsanitized screenshots (place raw captures here to keep them out of git)
+images/raw/
+images/original/
+*-raw.png
+*-original.png
+
+# Anything explicitly marked private
+*PRIVATE*
+!evidence/PRIVATE_EVIDENCE_NOT_INCLUDED.md
+
+# --- MkDocs build output ---
+site/
+
+# --- Python / docs tooling ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

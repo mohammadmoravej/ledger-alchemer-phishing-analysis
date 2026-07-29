@@ -1,0 +1,18 @@
+=== SANITIZED WHOIS EXCERPT ===
+Command: whois visit-ledger.at
+
+domain:         visit-ledger.at
+registrar:
+registrant:     <data not disclosed>
+tech-c:         <data not disclosed>
+nserver:        harlan.ns.cloudflare.com
+nserver:        paris.ns.cloudflare.com
+changed:        20260409 13:21:42
+source:         AT-DOM
+
+Interpretation:
+  - Registrant/tech-c not disclosed in the returned record.
+  - Name servers are Cloudflare.
+  - "changed" = 2026-04-09 13:21:42 is a CHANGE timestamp, NOT the creation/registration
+    date. The supplied output did not establish the original creation date.
+  - The registrar field was blank; no registrar is inferred.

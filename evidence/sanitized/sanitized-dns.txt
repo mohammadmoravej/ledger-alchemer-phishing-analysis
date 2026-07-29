@@ -1,0 +1,29 @@
+=== SANITIZED DNS EXCERPTS ===
+Commands:
+  dig visit-ledger.at
+  dig +short visit-ledger.at
+  dig MX visit-ledger.at
+  dig NS visit-ledger.at
+  dig TXT visit-ledger.at
+  host 172.64.80.1
+
+A record:
+  visit-ledger.at. 282 IN A 172.64.80.1
+  172.64.80.1
+  -> Cloudflare proxy/edge address (INFERENCE, high confidence), NOT necessarily origin.
+  -> SHARED infrastructure. Do not block this IP by itself.
+
+NS:
+  harlan.ns.cloudflare.com.
+  paris.ns.cloudflare.com.
+
+MX:
+  ANSWER: 0   (domain SOA in authority section) -> no MX published at query time.
+
+TXT:
+  ANSWER: 0   -> no TXT returned at query time.
+
+Reverse DNS:
+  host 172.64.80.1
+  Host 1.80.64.172.in-addr.arpa. not found: 3(NXDOMAIN)
+  -> No PTR returned. Not inherently suspicious; not a primary finding.

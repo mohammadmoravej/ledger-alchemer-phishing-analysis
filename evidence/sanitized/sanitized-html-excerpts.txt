@@ -1,0 +1,27 @@
+=== SANITIZED INITIAL HTML EXCERPTS (ledger.html, 7294 bytes) ===
+Saved during investigation as: /home/win11-lab/ledger.html
+
+<title>Redirect</title>
+<meta name="description" content="redirect"/>
+
+Loading spinner:
+<div class="w-10 h-10 border-2 border-zinc-500 border-t-zinc-200 rounded-full animate-spin ..."></div>
+
+Not-found component text:
+  Page not found
+  The page you're looking for doesn't exist or has been moved.
+  Go home     -> link to /
+  Panel       -> link to /panel   (NOT accessed; purpose/access controls not tested)
+
+Embedded Next.js route data:
+  "c":["","alchcemser"]
+  params":{"email":["alchcemser"]}
+  -> Route value "alchcemser" passed via a parameter named "email".
+  -> Parameter name does NOT prove the value is an email address.
+
+Content searches (grep) returned NO matches for:
+  <form | action= | seed | phrase | wallet | recover | mnemonic
+  -> Does not prove a form never existed; behavior is produced client-side.
+
+Referenced JS chunk:
+  /_next/static/chunks/8165ba880413402f.js

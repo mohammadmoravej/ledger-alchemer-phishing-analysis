@@ -1,0 +1,62 @@
+site_name: "Ledger-Themed Phishing Investigation"
+site_description: >-
+  A defensive case study in email authentication, Next.js Server Actions,
+  visitor tracking, and client-side redirect analysis.
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - tables
+
+nav:
+  - Home: index.md
+  - Executive Summary: executive-summary.md
+  - Scope and Ethics: scope-and-ethics.md
+  - Methodology: methodology.md
+  - Email Analysis: email-analysis.md
+  - Infrastructure Analysis: infrastructure-analysis.md
+  - Web Analysis: web-analysis.md
+  - JavaScript Analysis: javascript-analysis.md
+  - Browser & Network Analysis: browser-network-analysis.md
+  - Timeline: timeline.md
+  - Findings: findings.md
+  - Confidence Matrix: confidence-matrix.md
+  - Threat Assessment: threat-assessment.md
+  - Defensive Recommendations: defensive-recommendations.md
+  - Lessons Learned: lessons-learned.md
+  - Limitations: limitations.md
+  - References: references.md
+  - Appendix — Commands: appendix-commands.md
+  - Appendix — Raw Excerpts: appendix-raw-excerpts.md
+  - Publication Notes: publication-notes.md

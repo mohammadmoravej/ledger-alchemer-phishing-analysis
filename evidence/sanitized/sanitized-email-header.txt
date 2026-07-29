@@ -1,0 +1,24 @@
+=== SANITIZED EMAIL HEADER EXCERPT ===
+Recipient-specific and personal values are redacted.
+
+Subject (encoded): =?UTF-8?B?RGV2aWNlIFVwZGF0ZSBSZXF1aXJlZA==?=
+Subject (decoded): Device Update Required
+
+From: Ledger <noreply@alchemer.com>        (directly visible in the email screenshot)
+To: restore@ledger.live
+X-Apparently-To: [REDACTED-YAHOO-ADDRESS]
+Message-ID: [REDACTED-MESSAGE-ID]
+Date: July 28, 2026 at 10:21 PM            (displayed date of Email 4; investigation ran Jul 29)
+
+Authentication results:
+  SPF:   Pass
+  DKIM:  Pass
+  DMARC: Pass
+
+Note: The visible From domain is alchemer.com. SPF/DKIM/DMARC passing authenticates the
+sending (Alchemer) infrastructure, NOT Ledger. The visible "To:" differs from the actual
+delivery mailbox recorded by Yahoo in X-Apparently-To.
+
+Body cues visible in the screenshot: "Update ready for your Ledger device"; a red
+"Deadline: August 15, 2026 ... restricted access to your portfolio" urgency box; a
+"private keys never leave the device" reassurance box; a "Visit site" call-to-action.

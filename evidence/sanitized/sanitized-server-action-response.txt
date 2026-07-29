@@ -1,0 +1,14 @@
+=== SANITIZED NEXT.JS SERVER ACTION RESPONSE ===
+Source: first relevant POST to visit-ledger.at/alchcemser (Firefox DevTools, Network)
+Content-Type: text/x-component   (React/Next.js component stream, not plain JSON)
+
+0:{"a":"$@1","f":"","b":"SLPCX_WbhLb0KQizny4V5","q":"","i":false}
+1:{"visitorId":"6a69f7d7…cb113"}
+
+Notes:
+  - The Server Action returned a visitor ID (full value redacted -> 6a69f7d7…cb113).
+  - A second selected POST showed an EMPTY Response panel in DevTools:
+      "No readable response body was preserved or displayed for that selected request."
+    This does NOT establish that the server returned no data; protocol-level details for
+    that request were not inspected.
+  - Final observed browser destination: https://www.wikipedia.org/

@@ -1,0 +1,42 @@
+=== SANITIZED HTTP HEADER EXCERPTS ===
+Commands:
+  curl -I  https://visit-ledger.at/alchcemser
+  curl -IL https://visit-ledger.at/alchcemser
+
+Full response as captured in Screenshot 2026-07-29 at 10.28.21 AM.png:
+
+HTTP/2 200
+date: Wed, 29 Jul 2026 14:28:18 GMT
+content-type: text/html; charset=utf-8
+server: cloudflare
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+link: </_next/static/media/797e433ab948586e-s.p.dbea232f.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2",
+      </_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2>; rel=preload; as="font"; crossorigin=""; type="font/woff2"
+x-powered-by: Next.js
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+x-frame-options: DENY
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+strict-transport-security: max-age=63072000; includeSubDomains
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-cache-status: DYNAMIC
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=[CF-TOKEN]"}]}
+cf-ray: a22ccf2fcccd0026-YUL
+alt-svc: h3=":443"; ma=86400
+
+curl -IL also showed HTTP/2 200 and no 301/302 chain.
+
+Note: date/vary/link/nel/report-to/cf-ray are Cloudflare + Next.js infrastructure headers,
+not indicators of compromise. cf-ray suffix -YUL = Cloudflare edge in Montreal (consistent
+with the EDT timezone in the dig captures). The report-to endpoint token is Cloudflare's
+and was shortened to [CF-TOKEN] here.
+
+Interpretation:
+  - Initial request returned HTTP 200; no server-side HTTP redirect visible to curl.
+  - Response identified Next.js and Cloudflare.
+  - Security headers present but do NOT prove legitimacy.
+  - The later browser navigation to Wikipedia occurred after JavaScript execution.
+
+WAF (wafw00f https://visit-ledger.at):
+  "behind Cloudflare (Cloudflare Inc.) WAF. Number of requests: 2"
+  -> Infrastructure characterization, not malicious evidence.
