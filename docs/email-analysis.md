@@ -28,9 +28,12 @@ Calculated intervals:
 **FACT:** Four similar emails were shown in the mailbox screenshots within a 58-minute
 period.
 
-> **Figure** — `assets/images/fig-h-phishing-email.png`: the mailbox
-> shows four clustered "Ledger — Device Update Required" messages, and the opened message
-> is dated **July 28, 2026 at 10:21 PM** (Email 4).
+<a id="figure-h"></a>
+![Figure H — Clustered phishing emails in the mailbox](assets/images/fig-h-phishing-email.png)
+
+> **Figure H — Clustered phishing emails.** The mailbox shows four clustered
+> "Ledger — Device Update Required" messages, and the opened message is dated
+> **July 28, 2026 at 10:21 PM** (Email 4).
 
 **FACT (from the email screenshot):** The opened message's displayed date is **July 28,
 2026 at 10:21 PM**, which matches the 10:21 PM receipt time in the table. The investigation
@@ -146,8 +149,7 @@ The raw MIME/HTML included template remnants such as:
 **FACT:** These strings were preserved in the supplied email source.
 
 **FACT (from the email screenshot):** The message's displayed **From** address was
-`noreply@alchemer.com` (sender name "Ledger"). See
-`assets/images/fig-h-phishing-email.png`. This is direct evidence — not
+`noreply@alchemer.com` (sender name "Ledger"). See [Figure H](#figure-h). This is direct evidence — not
 just an inference from template remnants — that the message was sent from an Alchemer
 domain. It also explains the passing SPF/DKIM/DMARC results (§4): authentication aligned to
 `alchemer.com`, the true sending domain, **not** to Ledger.
@@ -269,7 +271,7 @@ than a legitimate device-specific notification.
 
 ## 9a. Message body and urgency cues (from the email screenshot)
 
-`assets/images/fig-h-phishing-email.png` shows the rendered body.
+[Figure H](#figure-h) shows the rendered body.
 
 **OBSERVATION (directly visible):**
 

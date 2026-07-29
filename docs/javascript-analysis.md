@@ -14,8 +14,11 @@ curl https://visit-ledger.at/_next/static/chunks/8165ba880413402f.js \
 
 Observed file size: **2313 bytes**.
 
-> **Figure** — `assets/images/fig-f-javascript-download.png` (and again in
-> `...10.29.12 AM.png`): the `curl` transfer meter confirms `app.js` = **2313 bytes**.
+<a id="figure-f"></a>
+![Figure F — JavaScript file download](assets/images/fig-f-javascript-download.png)
+
+> **Figure F — JavaScript file download.** The `curl` transfer meter confirms
+> `app.js` = **2313 bytes**.
 
 ```bash
 grep -Ei "ledger|wallet|seed|phrase|recover|api|fetch|post|token|email" app.js

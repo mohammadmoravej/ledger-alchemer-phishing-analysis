@@ -24,8 +24,11 @@ changed:        20260409 13:21:42
 source:         AT-DOM
 ```
 
-> **Figure** — `assets/images/fig-a-whois.png`: the `whois`
-> output on Kali, including the NIC.AT usage notice and the fields above.
+<a id="figure-a"></a>
+![Figure A — WHOIS lookup for visit-ledger.at](assets/images/fig-a-whois.png)
+
+> **Figure A — WHOIS lookup.** The `whois` output on Kali, including the NIC.AT
+> usage notice and the fields above.
 
 **FACT:** Registrant and technical-contact details were not disclosed in the returned
 record.
@@ -64,10 +67,13 @@ visit-ledger.at. 282 IN A 172.64.80.1
 172.64.80.1
 ```
 
-> **Figure** — `assets/images/fig-b-dns-a-record.png`: `dig
-> visit-ledger.at` (DiG 9.20.24-1+b1-Debian). Answer `visit-ledger.at. 282 IN A
-> 172.64.80.1`; query time 31 msec; `WHEN: Wed Jul 29 10:27:11 EDT 2026`. The local
-> resolver `192.168.2.1` is the analyst's LAN resolver, retained as authentic tool output.
+<a id="figure-b"></a>
+![Figure B — DNS A-record lookup for visit-ledger.at](assets/images/fig-b-dns-a-record.png)
+
+> **Figure B — DNS A-record lookup.** `dig visit-ledger.at`
+> (DiG 9.20.24-1+b1-Debian). Answer `visit-ledger.at. 282 IN A 172.64.80.1`;
+> query time 31 msec; `WHEN: Wed Jul 29 10:27:11 EDT 2026`. The local resolver
+> `192.168.2.1` is the analyst's LAN resolver, retained as authentic tool output.
 
 **FACT:** The resolver returned `172.64.80.1`.
 
@@ -111,8 +117,11 @@ ANSWER: 0
 **FACT:** No TXT record was returned at the time of the query. Absence of TXT is not
 inherently malicious.
 
-> **Figure** — `assets/images/fig-c-dns-txt-record.png`: `dig TXT
-> visit-ledger.at` showing `ANSWER: 0` and the domain SOA
+<a id="figure-c"></a>
+![Figure C — DNS TXT-record lookup for visit-ledger.at](assets/images/fig-c-dns-txt-record.png)
+
+> **Figure C — DNS TXT-record lookup.** `dig TXT visit-ledger.at` showing
+> `ANSWER: 0` and the domain SOA
 > (`harlan.ns.cloudflare.com. dns.cloudflare.com. 2406797451 ...`) in the authority
 > section; `WHEN: Wed Jul 29 10:27:36 EDT 2026`.
 
@@ -157,10 +166,13 @@ Cipher: TLS_AES_256_GCM_SHA384
 Verify return code: 0 (ok)
 ```
 
-> **Figure** — `assets/images/fig-d-tls-session.png`: the
-> `openssl s_client` tail. It **confirms** `subject=CN=visit-ledger.at` and
-> `issuer=C=US, O=Let's Encrypt, CN=YE1` (i.e., the `YE1` issuer CN is accurate, not a
-> transcription artifact), `Protocol: TLSv1.3`, `Cipher ... TLS_AES_256_GCM_SHA384`, and
+<a id="figure-d"></a>
+![Figure D — TLS session details for visit-ledger.at](assets/images/fig-d-tls-session.png)
+
+> **Figure D — TLS session details.** The `openssl s_client` tail. It **confirms**
+> `subject=CN=visit-ledger.at` and `issuer=C=US, O=Let's Encrypt, CN=YE1`
+> (i.e., the `YE1` issuer CN is accurate, not a transcription artifact),
+> `Protocol: TLSv1.3`, `Cipher ... TLS_AES_256_GCM_SHA384`, and
 > `Verify return code: 0 (ok)`. It additionally shows `Peer signature type:
 > ecdsa_secp256r1_sha256`, a 256-bit (ECDSA P-256) server key, and the negotiated
 > post-quantum-hybrid group `X25519MLKEM768`. The SAN list
@@ -231,9 +243,12 @@ cf-cache-status: DYNAMIC
 alt-svc: h3=":443"; ma=86400
 ```
 
-> **Figure** — `assets/images/fig-e-http-headers.png`: the full
-> `curl -I` response. It confirms the fields above and shows additional headers omitted from
-> the summary block: `date: Wed, 29 Jul 2026 14:28:18 GMT` (= 10:28 EDT), `vary: rsc,
+<a id="figure-e"></a>
+![Figure E — HTTP response headers from visit-ledger.at](assets/images/fig-e-http-headers.png)
+
+> **Figure E — HTTP response headers.** The full `curl -I` response. It confirms
+> the fields above and shows additional headers omitted from the summary block:
+> `date: Wed, 29 Jul 2026 14:28:18 GMT` (= 10:28 EDT), `vary: rsc,
 > next-router-state-tree, next-router-prefetch, next-router-segment-prefetch,
 > Accept-Encoding` (Next.js RSC negotiation), a `link:` header preloading two `woff2` fonts
 > from `/_next/static/media/`, Cloudflare `nel` / `report-to` (Network Error Logging), and

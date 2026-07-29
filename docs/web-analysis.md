@@ -15,9 +15,12 @@ curl https://visit-ledger.at/alchcemser \
 
 Observed file size: **7294 bytes**. Saved as `/home/win11-lab/ledger.html`.
 
-> **Figure** — `assets/images/fig-g-html-download.png`: the `curl`
-> transfer meter confirms `ledger.html` = **7294 bytes** (with `User-Agent: Mozilla/5.0`).
-> In the captured sequence this HTML save occurred at 10:29:12, **after** the `app.js`
+<a id="figure-g"></a>
+![Figure G — HTML page download](assets/images/fig-g-html-download.png)
+
+> **Figure G — HTML page download.** The `curl` transfer meter confirms
+> `ledger.html` = **7294 bytes** (with `User-Agent: Mozilla/5.0`). In the captured
+> sequence this HTML save occurred at 10:29:12, **after** the `app.js`
 > download at 10:28:36 — see [Timeline](timeline.md). The chunk filename would have been
 > known from an earlier view of the page/shell.
 

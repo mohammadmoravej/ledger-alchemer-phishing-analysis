@@ -60,5 +60,5 @@ public repository. See the private-evidence notice in the `evidence/` directory.
 ## Ethical statement
 
 This work is intended to educate defenders and learners. It must not be used to access,
-probe, or interact with the infrastructure described. See
-[DISCLAIMER](../DISCLAIMER.md) and [SECURITY](../SECURITY.md).
+probe, or interact with the infrastructure described. See the repository-root
+`DISCLAIMER.md` and `SECURITY.md` files.
