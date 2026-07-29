@@ -37,9 +37,9 @@ destination, if any, was not observed.
 No credentials entered; no recovery phrase submitted; nothing bypassed; no unauthorized
 access. Sensitive data redacted. See `DISCLAIMER.md` and `SECURITY.md`.
 
-### To do before/at publication
+### Known limitations
 
-- Verify that all sanitized figures are present in `images/` using the documented
-  filenames.
-- Original `ledger.html` and `app.js` cryptographic hashes are unavailable because they
-  were not recorded during evidence collection.
+- Cryptographic hashes for the original `ledger.html` and `app.js` artifacts are
+  unavailable because they were not recorded during evidence collection.
+- Raw evidence and sensitive recipient or tracking data are intentionally excluded from
+  the public repository.
