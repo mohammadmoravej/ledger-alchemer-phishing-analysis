@@ -36,9 +36,12 @@ official wallet migration guidance immediately.
 
 ## Reporting an issue with this repository
 
-If you believe this repository accidentally exposes personal data or unsanitized
-evidence, please open an issue (without republishing the sensitive value) or contact the
-author privately so it can be redacted.
+If you believe this repository accidentally exposes personal data, unsanitized evidence,
+or contains a security issue, please use GitHub's **Private Vulnerability Reporting**
+feature to report it privately.
+
+If the issue is not security-related, you may open a public GitHub Issue. Please do not
+republish sensitive information in public reports.
 
 ## Data-handling commitment
 
