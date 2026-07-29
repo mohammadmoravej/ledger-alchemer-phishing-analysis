@@ -2,7 +2,7 @@
 
 ## Ledger-Themed Phishing Investigation (defensive case study)
 
-First public release of the sanitized, evidence-based case study.
+First public release of the sanitized, evidence-based defensive investigation repository.
 
 ### Included
 
